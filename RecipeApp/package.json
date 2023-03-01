@@ -9,7 +9,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.8",
     "pinia": "^2.0.32",
+    "postcss": "^7.0.39",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
@@ -17,6 +19,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.34.0",
     "eslint-plugin-vue": "^9.9.0",
+    "tailwindcss": "^3.2.7",
     "vite": "^4.1.3"
   }
 }
