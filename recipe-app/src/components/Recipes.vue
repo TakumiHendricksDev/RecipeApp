@@ -1,21 +1,17 @@
 <script setup>
-    import { ref } from 'vue';
     import Recipe from './Recipe.vue';
+    import { useRecipeStore } from '../stores/RecipeStore.js';
 
-    let recipes = ref([])
-
-    fetch('http://localhost:3000/recipes')
-            .then(response => response.json())
-            .then(data => {
-                recipes.value = data;
-            });
+    let recipeStore = useRecipeStore();
+    recipeStore.get()
+    
 </script>
 
 <template>
     <main>
         <div class="grid grid-cols-4 gap-4">
-            <div v-for="recipe in recipes" :key="recipe.id">
-                <Recipe :name="recipe.name" :description="recipe.description" :link="recipe.link"></Recipe>
+            <div v-for="recipe in recipeStore.recipes" :key="recipe.id">
+                <Recipe :name="recipe.name" :description="recipe.description" :link="recipe.link" :id="recipe.id"></Recipe>
             </div>
         </div>
     </main>
