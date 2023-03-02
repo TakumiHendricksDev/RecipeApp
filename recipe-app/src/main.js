@@ -4,6 +4,7 @@ import './style.css'
 import App from './App.vue'
 import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
+import CreateView from './views/CreateView.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -17,6 +18,11 @@ const router = createRouter({
             path: '/about',
             name: 'About',
             component: AboutView
+        },
+        {
+            path: '/create',
+            name: 'Create Recipe',
+            component: CreateView
         }
     ]
 })

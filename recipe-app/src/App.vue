@@ -1,11 +1,18 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import Navbar from './components/Navbar.vue';
 import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <Navbar></Navbar>
+  <header class="bg-neutral-50">
+    <Navbar class="p-5 flex w-100">
+    </Navbar>
+  </header>
+  <body>
+    <RouterView></RouterView>
+  </body>
+  <footer>
 
-  <RouterView></RouterView>
+  </footer>
+  
 </template>

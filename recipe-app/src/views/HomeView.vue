@@ -1,5 +1,11 @@
+<script setup>
+    import Recipes from '../components/Recipes.vue';
+</script>
+
 <template>
     <main>
-        <h1>Home View</h1>
+        <div class="px-10 py-5">
+            <Recipes></Recipes>
+        </div>
     </main>
 </template>
