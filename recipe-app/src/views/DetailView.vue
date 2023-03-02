@@ -4,7 +4,9 @@
     import { useRoute } from 'vue-router';
 
     let recipeStore = useRecipeStore();
-    recipeStore.get();
+    onMounted(() => {
+        recipeStore.get();
+    })
     const route = useRoute()
     const url = route.params.url
     let recipe = ref({})
