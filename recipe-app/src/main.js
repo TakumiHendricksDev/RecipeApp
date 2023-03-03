@@ -7,6 +7,7 @@ import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
 import CreateView from './views/CreateView.vue'
 import DetailView from './views/DetailView.vue'
+import EditView from './views/EditView.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -30,6 +31,11 @@ const router = createRouter({
             path: '/recipe/:url',
             name: 'Detail',
             component: DetailView,
+        },
+        {
+            path: '/edit/:url',
+            name: 'Edit',
+            component: EditView,
         }
     ]
 })
