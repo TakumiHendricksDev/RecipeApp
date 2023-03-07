@@ -18,7 +18,7 @@
 <template>
     <main class="p-5">
         <div class="mb-5">
-            <RouterLink class="border rounded-md bg-gray-200 py-2 px-5" :to="{ name: 'Edit', params: { url:recipe.id } }">Edit Recipe</RouterLink>
+            <RouterLink class="border rounded-md bg-gray-200 py-2 px-5" :to="{ name: 'Edit', params: { url:url } }">Edit Recipe</RouterLink>
         </div>
         <img :src="recipe.link" class="w-auto h-96 mb-5 rounded-lg"/>
         <h1 class="font-bold text-2xl mb-5">{{ recipe.name }}</h1>
